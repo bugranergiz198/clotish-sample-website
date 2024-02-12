@@ -1,0 +1,430 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+HTML{
+    scroll-behavior: smooth;
+}
+.detailedpart{
+    height: 100vh;
+    width: 100%;
+    background-color: #725b7a;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 30px;
+}
+.carouselpart{
+    width: 50%;
+    height: 75%;
+    position: relative;
+}
+
+.selectionpart{
+    width: 40%;
+    height: 75%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    background-color: #725b7a;
+    border-radius: 30px;
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+#itemphoto{
+    width: 100%;
+    height: 100%;
+}
+/*Images part started here*/
+.carousel-inner{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 30px;
+    
+}
+.clothvideo, .carousel-item > .fotograf{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.carousel-control-prev{
+    background-color: #330044;
+}
+
+/*Selection part*/
+.size, .color{
+    width: 70%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    overflow-x: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+ 
+.abouttshirt{
+    width: 90%;
+    padding: 10px 0;
+    font-family: 'oswald', sans-serif;
+    font-weight: 300;
+    color:#fff;
+    font-size: 1.3rem;
+    transform: translateY(-50px);
+}
+.header{
+    font-size: 2.3rem;
+    font-family: 'Tilt Warp', cursive;
+    font-weight: 500;
+    color: #c6cffe;
+    transform: translateY(-30px);
+}
+.model_name{
+    color: #330044;
+    margin-left: 5px;
+}
+
+.radio__input, .color_radio_input{
+    display: none;
+}
+.radio__input:checked  + .radio__label{ /* radio_input checked olursa radio_label'ı değiştir demek kısaca. */
+    background-color: #fe7682;
+}
+
+.s, .m, .l, .xl{
+    width: 50px;
+    height: 50px;
+    font-family: 'Tilt Prism', cursive;
+}
+.radio__label{
+    color: white;
+    background-color: #427dab;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    font-size: 0.8rem;
+    width: 50px;
+    height: 50px;
+}
+
+.basketbutton, .finished{
+    width: 130px;
+    height: 55px;
+    background: #fe7682;
+    color: #fff;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+.basketbutton{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.finished{
+    cursor:not-allowed !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #c76a85;
+    opacity: 0.6;
+}
+.basketandprice{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.product_price{
+    width: 130px;
+    height: 55px;
+    background-color: #330044;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1.05rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    position: relative;
+}
+.product_price span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.splitterdiv{
+    border-radius: 15px;
+    width: 3px;
+    height: 100%;
+    background-color: #fe7682;
+}
+.urundetay{
+    transition: 0.2s;
+    font-family: 'Oswald', sans-serif;
+    color: #c6cffe;
+}
+
+/*Color and Size scroll bar styling*/
+.color::-webkit-scrollbar, .size::-webkit-scrollbar{
+    height: 5px;
+    width: 0;
+  }
+  .color::-webkit-scrollbar-thumb, .size::-webkit-scrollbar-thumb{
+    background: #c76a85; 
+    border-radius: 10px;
+  }
+  .productdetails{
+    width: 100%;
+    height: 100vh;
+    background-color: #c3508a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .productproperties{
+    width: 70%;
+    height: 80%;
+    background-color: #c76a85;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding-left: 40px;
+  }
+  .productheader{
+    font-size: 2.5rem;
+    font-family: 'Tilt Warp', cursive;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: .1em .1em 0 hsl(200 50% 30%);
+  }
+  
+  .productpropertieslist ul li{
+    list-style:disc;
+    margin: 20px 0;
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-weight: 500;
+  }
+  .bodytable{
+    display: flex;
+    background-color: #330044;
+    width: 130px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: 0.3s ease-in all;
+    padding: 0 8px;
+  }
+  #tablebutton{
+    margin-top: 3px;
+    transition: 0.4s all;
+  }
+  .bodytablediv{
+    position: absolute;
+    right: -100%;
+    height: 80%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    transition: 0.8s;
+    align-items: center;
+  }
+  #crossbutton{
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    padding: 5px 12px;
+    z-index: 3;
+    color: #fff;
+    background-color: #1d1818;
+  }
+  .bodyguide{
+    width: 100%;
+    height: 100%;
+  }
+  .bodyguide img{
+    width: 100%;
+    height: 100%;
+    object-fit:contain;
+    filter: brightness(0.9);
+  }
+  @media (hover: hover){
+    .basketbutton:hover{
+        color: #fff;
+        background-color: #c76a85;
+    }
+    
+    .urundetay:hover{
+        color: #fff;
+    }
+  }
+  @media screen and (max-width:920px){
+    .detailedpart{
+        height: 200vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-top: 80px;
+    }
+    .carouselpart{
+        width: 90%;
+        height: 400px;
+    }
+    
+    .selectionpart{
+        width: 90%;
+        height: 600px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #725b7a;
+        border-radius: 30px;
+        box-shadow: rgba(0, 0, 0, 0.13) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
+    .size, .color{
+        width: 100%;
+        height: 70px;
+    }
+    .basketandprice{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        transform: translateY(20px);
+    }
+    .header{
+        font-size: 2rem;
+        transform: translateY(0px);
+        text-align: center;
+    }
+    .abouttshirt{
+        width: 95%;
+        font-size: 18px;
+        transform: translateY(0px);
+    }
+    .s, .m, .l, .xl{
+        width: 60px;
+        height: 60px;
+        margin: 0 7px;
+    }
+    .radio__label{
+        width: 60px;
+        height: 60px;
+    }
+    .white, .black, .grey, .wheat, .antin{
+        width: 40px;
+        height: 40px;
+    }
+    .splitterdiv{
+        display: none;
+    }
+    .basketbutton{
+        width: 130px;
+        height: 55px;
+        transition: 0s;
+    }
+    .basketbutton:active{
+        color: #fff;
+        background-color: #c76a85;
+    }
+    .urundetay{
+        transform: translateY(10px);
+        transition: 0s;
+    }
+    .urundetay:active{
+        color: #330044;
+    }
+    .color::-webkit-scrollbar, .size::-webkit-scrollbar{
+        height: 3px; 
+      }
+      .color::-webkit-scrollbar-thumb, .size::-webkit-scrollbar-thumb{
+        background: #c76a85; 
+        border-radius: 10px;
+      }
+      /*Product properties mobile design started here.*/
+      .productproperties{
+        width: 100%;
+        height: 100%;
+        padding: 0 10px;
+        padding-left: 20px;
+      }
+      .productpropertieslist ul li{
+        font-weight: 400;
+      }
+      .productheader{
+       text-align: center;
+      }
+      .bodytablediv{
+        position: absolute;
+        right: -150%;
+        height: 70%;
+        width: 90%;
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        transition: 0.8s;
+        align-items: center;
+      }
+      
+  }
+  
+  @media screen and (max-width:1100px) and (min-width:800px){
+    .size, .color{
+        width: 100%;
+        height: 70px;
+    }
+    .basketandprice{
+        width: 100%;
+        height: 120px;
+    }
+    .splitterdiv{
+        display: none;
+    }
+    .product_price{
+        width: 110px;
+        height: 45px;
+    }
+    .basketbutton{
+        width: 110px;
+        height: 45px;
+    }
+    .urundetay{
+        text-align: center;
+    }
+    .abouttshirt{
+        width: 95%;
+        font-size: 18px;
+        transform: translateY(0px);
+    }
+    .header{
+        transform: translateY(0px);}
+  }

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: 0;
+        }
+        
+        .realeffect{
+            height: 100vh;
+            width: 100vw;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            transition: opacity 0.75s, visibility 0.75s;
+            z-index:1000;
+        }
+        .realeffect--hidden{
+            opacity: 0;
+            visibility: hidden;
+        }
+        .texty{
+            font-family: 'Pacifico', cursive;
+            color: white;
+            font-size: 54px;
+            text-align: center;
+        }
+        .darkscene{
+            height: 65px;
+            width: 180px;
+            position: absolute;
+            background-color: black;
+            animation: gotoright 1.5s ease-in-out infinite;
+        }
+        .texty::before{
+            content: "";
+            display: block;
+            height: 5px;
+            width: 20px;
+            border-radius: 10px;
+            background-color: white;
+            animation: gotoend 1.5s ease-in-out infinite;
+        }
+        .texty::after{
+            content: "";
+            display: block;
+            height: 5px;
+            width: 20px;
+            border-radius: 10px;
+            background-color: white;
+            animation: gotoend 1.5s ease-in-out infinite;
+        }
+        @keyframes gotoright{
+            0%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(180px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+        @keyframes gotoend {
+            0%{
+                transform: translateX(0);
+            }
+            50%{
+                transform: translateX(180px);
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load",()=>{
+            document.querySelector(".realeffect").classList.add("realeffect--hidden");
+        })
+    </script>
+
+</head>
+<body>
+    <div class="realeffect">
+    <div class="loader">
+        <span class="texty">Clotish.</span>
+    </div>
+    <span class="darkscene"></span>
+    </div>
+</body>
+</html>

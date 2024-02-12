@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clotish | Ürünler</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/products.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename = 'css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static', filename = 'favicon.ico')}}" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    {% include "includes/pageloader.html" %}
+    {% include "includes/navbar.html" %}  
+    <section>
+        <div class="productheader">Ürünlerimiz</div>
+        <div class="products clothes_list">
+            {% if cloths %}
+            {% for eachcloth in cloths %}
+            <div class="product">
+                <div class="shapedivider"></div>
+                <span class="clickit">Tıklayın</span>
+                <img src={{ eachcloth["imgSource"] }} class="productimage"> 
+                    <div class="nameandpricecontainer">
+                <div class="productname">{{ eachcloth["name"] }}</div>
+                <div class="pricelabel">{{ eachcloth["price"] }} tl</div>
+                    </div>
+                    <div class="colorsizebuy">
+                        <a class="addtobasket {{ eachcloth["figure"] }}" href="/kıyafetdetay/{{ eachcloth["id"] }}">İncele</a>
+                    </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+    <script src="{{url_for('static',filename = 'js/products.js')}}" type = "module"></script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #212324;
+}
+h3{
+    font-size: 5rem;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -6px;
+    margin-top: -100px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+section{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #8f1917;
+    clip-path: circle(0 at center center);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+.innertext{
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    z-index: -1;
+    white-space: nowrap;
+    font-family: 'Archivo Narrow', sans-serif;
+    color: #fff;
+    font-size: 10vw;
+    width: 100%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+.text{
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    font-family: 'Archivo Narrow', sans-serif;
+    z-index: -1;
+    white-space: nowrap;
+    color: transparent;
+    font-size: 10vw;
+    width: 100%;
+    transform: translateY(-50%);
+    -webkit-text-stroke: 2px #fff;
+    text-align: center;
+}
+.gelisme{
+    width: 100%;
+    height: 100vh;
+    margin-top: 220vh;
+    background-color: #8f1917;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.gelisme .whyclotish{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header{
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    font-size: 4.5rem;
+    color: #feccd5;
+    letter-spacing: -2px;
+    text-shadow: .1em .1em 0 #212324;
+}
+.explanation{
+    font-size: 20px;
+    width: 65%;
+    margin-top: 65px;
+    color: #8f1917;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;
+    background-color: #feccd5;
+    padding: 30px 60px;
+}
+/*Quality part*/
+.quality{
+    width: 100%;
+    height: 100vh;
+    background-color: #feccd5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.qualityheader{
+    font-family: 'Cabin', sans-serif;
+    color: #8f1917;
+    font-size: 4.5rem;
+    font-weight: 700;
+    
+}
+
+.second{
+    color: #feccd5;
+    padding: 20px 60px;
+    background-color: #8f1917;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+}
+.imagesaboutquality{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #212324;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -100%;
+    transition: 1s;
+}
+.firstimgandexpl, .secondimgandexp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80%;
+    width: 75%;
+    transition: 1s all;
+    position: relative;
+}
+.secondimgandexp{
+    background-color: transparent;
+    display: none;
+}
+.firstimgandexpl img, .secondimgandexp img{
+    width: 50%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: rgba(123, 123, 136, 0.2) 0px 7px 29px 0px;
+    z-index: 1;
+    transform: translateY(50px);
+}
+
+.firstimgandexpl span, .secondimgandexp span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 50%;
+    background-color: #feccd5;
+    border-radius: 25px;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #212324;
+    padding: 0 20px;
+    box-shadow: rgba(123, 123, 136, 0.2) 0px 7px 29px 0px;
+    transform: translateX(-600px);
+    z-index: 0;
+    transition: 1s all;
+
+}
+.secondimgandexp span
+{
+    transform: translateX(-1200px);
+}
+.secondimgandexp img{
+    transition: 1s all;
+    transform: translateX(850px);
+    margin-top: 100px;
+}
+
+.somesamples{
+    width: 100%;
+    height: 80vh;
+    background-color: #8f1917;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.insidetext{
+    font-size: 18px;
+    text-align: center;
+    display: block;
+    color: #212324;
+    font-family: 'Archivo Narrow', sans-serif;
+    font-weight: 500;
+}
+.somesamples .explanation{
+    margin-bottom: 150px;
+}
+.clothmachine{
+    height: 100vh;
+    width: 100%;
+    background-color: #8f1917;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.spacediv{
+    width: 75%;
+    height: 80%;
+    background-color: #212324;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spacediv img, .spacediv .innerrealtext{
+    width: 50%;
+    height: 100%;
+    transition: 1s all;
+}
+.spacediv img{
+    object-fit: cover;
+    filter: opacity(0.7);
+    transform: translateX(-800px);
+}
+.innerrealtext{
+    color: #feccd5;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    font-family: 'Archivo Narrow', sans-serif;
+    justify-content: center;
+    font-size: 18px;
+    transform: translateX(800px);
+}
+@media screen and (max-width:800px){
+    h3{
+        font-size: 4rem;
+        letter-spacing: -2px;
+    }
+    
+    .innertext{
+        font-size: 15vw; 
+    }
+    .text{
+        font-size: 15vw;
+        -webkit-text-stroke: 1px #fff;
+    }
+    .gelisme{
+        margin-top: 310vh;
+        align-items: center;
+    }
+    .gelisme .whyclotish{
+        justify-content: flex-start;
+        transform: translateY(-100px);
+    }
+    .header{
+        font-weight: 700;
+        font-size: 3.5rem;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+    .explanation{
+        font-size: 18px;
+        width: 90%;
+        margin-top: 75px;
+        border-radius: 15px;
+        padding: 30px;
+    }
+    .quality{
+        position: relative;
+    }
+    .qualityheader{
+        position: absolute;
+        top: 50px;
+        font-size: 4rem;
+    }
+    .second{
+        position: absolute;
+        top: 150px;
+        text-align: center;
+        background-color: #8f1917;
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+    }
+    .firstimgandexpl, .secondimgandexp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        width: 80%;
+        transition: 1s all;
+        position: relative;
+    }
+    .firstimgandexpl img, .secondimgandexp img{
+        width: 100%;
+        height: 35%;
+        transform: translateY(0px);
+    }
+    .firstimgandexpl img{
+        margin-bottom: 15px;
+        height: 40%;
+    }
+    .secondimgandexp img{
+        transition: 1s all;
+        transform: translateX(850px);
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    .firstimgandexpl span, .secondimgandexp span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 35%;
+        overflow-y: auto;
+    }
+    .firstimgandexpl span{
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+    .secondimgandexp span{
+        margin-bottom: 30px;
+    }
+    .somesamples{
+        width: 100%;
+        height: 100vh;
+        background-color: #8f1917;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .sampleheader{
+        margin-top: 120px;
+    }
+    .clothmachine{
+        align-items: flex-start;
+    }
+    .spacediv{
+        width: 90%;
+        height: 90%;
+        flex-direction: column;
+    }
+    .spacediv img, .spacediv .innerrealtext{
+        width: 100%;
+        height: 50%;
+    }
+    .innerrealtext{
+        height: 50%;
+        width: 100%;
+        padding: 20px;
+        font-weight: 400;
+        font-size: 16px;
+        overflow-y: auto;
+        align-items: flex-start;
+    }
+}

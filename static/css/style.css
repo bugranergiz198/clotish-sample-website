@@ -1,0 +1,288 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+    font-size: 400;
+}
+.landingpage{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/*Video Background*/
+
+.videobackground{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.videoplayer{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+/*Scrolled part*/
+
+.text{
+    font-size: 10vw;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    z-index: 1;
+    position: fixed;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    color: transparent;
+    -webkit-text-stroke: 2px #fff;
+}
+.aboutpart{
+    height: 150vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.aboutus, .aboutus2{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+    position: relative;
+}
+.aboutus{
+    background-color: #100e11;
+}
+.secondbcolor{
+    width: 40%;
+    height: 150%;
+    background-color: #c84226;
+    position: absolute;
+    z-index: 2;
+    bottom: -65%;
+    right: -25%;
+    transform: rotate(37deg);
+}
+.thirdbcolor{
+    width: 40%;
+    height: 150%;
+    background-color: #100e11;
+    position: absolute;
+    z-index: 2;
+    top: -65%;
+    left: -25%;
+    transform: rotate(37deg);
+}
+/*explore button*/
+.explorebutton, .explorebutton2{
+    padding: 10px 50px;
+    font-size: 21px;
+    color: rgb(241, 233, 233);
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.4s;
+    background-color: #c84226;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+}
+.explorebutton2{
+    background-color: #100e11;
+}
+.explorebutton, .explorebutton2 , .aboutustitle, .aboutussentence{
+    z-index: 10;
+}
+.explorebutton:hover{
+    background-color: rgb(241, 233, 233);
+    color: #100e11;
+}
+.explorebutton2:hover{
+    background-color: rgb(241, 233, 233);
+    color: #100e11;
+}
+.aboutus2{
+    background-color: #c84226;
+}
+.aboutustitle{
+    color: rgb(241, 233, 233);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
+    
+}
+.aboutussentence{
+    color: rgb(241, 233, 233);
+    width: 60%;
+    text-align: center;
+    line-height: 2rem;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+/*Footer part*/
+footer{
+    height: 30vh;
+    width: 100%;
+}
+.footerbar{
+    width: 100%;
+    height: 20vh;
+    background-color: #100e11;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.socialmedia{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+.sm{
+    color: gray;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+.icons{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons i{
+    transition: all 0.8s ease-in-out;
+}
+.icons i:hover{
+    transform: rotate(360deg);
+}
+.rights{
+    width: 100%;
+    height: 10vh;
+    color: gainsboro;
+    background-color: #5b3112;
+    font-family: 'Sofia Sans Extra Condensed', sans-serif;
+    display: flex;
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.splitter{
+    height: 90%;
+    width: 2px;
+    background-color: #c84226;
+    border-radius: 10px;
+}
+/*Communication side*/
+.communication{
+    height: 100%;
+    width: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.communicate{
+    height: 100%;
+    width: 58%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: gainsboro;
+}
+.communicate span{
+    margin-left: 3px;
+    font-size: 1.1rem;
+}
+
+.communicate i{
+    color: gray;
+    font-size: 1.2rem;
+}
+.flork{
+    font-family: 'Rubik Doodle Shadow', system-ui;
+}
+.agreements{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.agreements a{
+    color: gainsboro;
+    transition: 0.1s;
+    margin: 2px 0;
+    text-align: center;
+}
+.agreements a:hover{
+    color: grey;
+}
+@media screen and (max-width:600px){
+    
+    .aboutpart{
+        height: 250vh;
+    }
+    .secondbcolor, .thirdbcolor{
+        display: none;
+    }
+    .sm{
+        font-size: 1.5rem;
+    }
+    .icons i{
+        font-size: 1.8rem;
+    }
+    .footerbar{
+        height: 45vh;
+    }
+    .icons{
+        width: 20%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .icons i{
+        font-size: 2.5rem;
+    }
+    .communication{
+        width: 75%;
+    }
+    .agreements{
+        justify-content: space-evenly;
+    }
+    .phone, .email, .address{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+}
